@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sfd2ufo-corrected"
+version = "0.1.0"
+description = "SFD/SFDIR to UFO3 with source-faithful quadratic outline conversion"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-3-Clause"
+license-files = ["LICENSE", "licenses/*", "THIRD_PARTY.md"]
+dependencies = ["sfdLib==2.0.0.post0", "fonttools>=4.0.0", "ufoLib2>=0.19.1,<0.20"]
+
+[project.scripts]
+sfd2ufo-corrected = "converter:main"
+
+[tool.setuptools]
+py-modules = ["converter"]
+
+[project.urls]
+Repository = "https://github.com/david-buck/sfd2ufo-corrected"
